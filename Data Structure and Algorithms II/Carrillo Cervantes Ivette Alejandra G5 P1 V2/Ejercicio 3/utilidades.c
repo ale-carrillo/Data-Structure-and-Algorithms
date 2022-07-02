@@ -1,0 +1,29 @@
+#include "utilidades.h"
+#include <stdio.h>
+void swap(int* a, int* b){
+    int t = *a;
+    *a = *b;
+    *b = t;
+}
+
+void printArray(int arr[],int size){
+	int i;
+    printf("{");
+  	for (i=0; i < size; i++)
+        if (i<size-1)
+        {
+            printf(" %d,", arr[i]);
+        } else{
+            printf(" %d", arr[i]);
+        }
+    printf("}");
+    printf("\n");
+}
+
+void printSubArray(int arr[],int low, int high){
+    int i;
+    printf("Sub array :  ");
+	for (i=low; i <= high; i++)
+       printf("%d ", arr[i]);
+    printf("\n");
+}
